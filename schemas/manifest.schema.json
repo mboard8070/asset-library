@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Asset Manifest",
+  "description": "Schema for digital twin product asset manifests",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "sku",
+    "product_name",
+    "brand",
+    "category",
+    "archetype",
+    "base_geometry",
+    "material"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+$"
+    },
+    "sku": {
+      "type": "string",
+      "minLength": 1
+    },
+    "product_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "brand": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parent_company": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "personal_care",
+        "skincare",
+        "haircare",
+        "household",
+        "beauty",
+        "grooming"
+      ]
+    },
+    "archetype": {
+      "type": "string",
+      "enum": [
+        "pump_bottle",
+        "bar_soap_box",
+        "jar",
+        "tube",
+        "bottle",
+        "box",
+        "pouch"
+      ]
+    },
+    "dimensions": {
+      "type": "object",
+      "properties": {
+        "height_cm": { "type": "number", "minimum": 0 },
+        "width_cm": { "type": "number", "minimum": 0 },
+        "depth_cm": { "type": "number", "minimum": 0 }
+      }
+    },
+    "weight": {
+      "type": "object",
+      "required": ["value", "unit"],
+      "properties": {
+        "value": { "type": "number", "minimum": 0 },
+        "unit": {
+          "type": "string",
+          "enum": ["oz", "g", "ml", "fl_oz"]
+        }
+      }
+    },
+    "pack_count": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
+    },
+    "base_geometry": {
+      "type": "string",
+      "minLength": 1
+    },
+    "material": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lods": {
+      "type": "object",
+      "properties": {
+        "hero": { "type": "string" },
+        "realtime": { "type": "string" },
+        "thumbnail": { "type": "string" }
+      }
+    },
+    "variants": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "label_texture": { "type": "string" },
+          "product_name_localized": { "type": "string" }
+        }
+      }
+    },
+    "render_presets": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "resolution": {
+            "type": "array",
+            "items": { "type": "integer", "minimum": 1 },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "renderer": { "type": "string" },
+          "lighting_rig": { "type": "string" },
+          "background": { "type": "string" }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "created": {
+      "type": "string",
+      "format": "date"
+    },
+    "updated": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "additionalProperties": false
+}

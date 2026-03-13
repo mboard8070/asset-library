@@ -1,0 +1,58 @@
+schema_version: "1.0"
+sku: "030772008355"
+product_name: "Safeguard Liquid Hand Soap - Notes of Lavender"
+brand: "Safeguard"
+parent_company: "Procter & Gamble"
+category: "personal_care"
+archetype: "pump_bottle"
+
+dimensions:
+  height_cm: 20.3
+  width_cm: 8.9
+  depth_cm: 5.1
+
+weight:
+  value: 15.5
+  unit: "fl_oz"
+
+pack_count: 1
+
+base_geometry: "geo/base.usd"
+material: "materials/master.mtlx"
+
+lods:
+  hero: "geo/base.usd"
+  realtime: "geo/lod1.usd"
+  thumbnail: "geo/lod2.usd"
+
+variants:
+  en-us:
+    label_texture: "variants/en-us/label_diffuse.exr"
+    product_name_localized: "Safeguard Liquid Hand Soap - Notes of Lavender"
+
+render_presets:
+  ecommerce:
+    resolution: [2048, 2048]
+    renderer: "arnold"
+    lighting_rig: "rigs/packshot_neutral.usd"
+    background: "white"
+  social:
+    resolution: [1080, 1080]
+    renderer: "cycles"
+    lighting_rig: "rigs/lifestyle_warm.usd"
+    background: "gradient"
+  broadcast:
+    resolution: [3840, 2160]
+    renderer: "arnold"
+    lighting_rig: "rigs/hero_beauty.usd"
+    background: "environment"
+
+tags:
+  - "hand soap"
+  - "antibacterial"
+  - "lavender"
+  - "micellar"
+  - "pump bottle"
+
+created: "2026-03-13"
+updated: "2026-03-13"

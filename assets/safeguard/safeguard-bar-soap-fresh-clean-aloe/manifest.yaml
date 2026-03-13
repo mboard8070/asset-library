@@ -1,0 +1,58 @@
+schema_version: "1.0"
+sku: "037000313977"
+product_name: "Safeguard Bar Soap - Fresh Clean Scent with Aloe"
+brand: "Safeguard"
+parent_company: "Procter & Gamble"
+category: "personal_care"
+archetype: "bar_soap_box"
+
+dimensions:
+  height_cm: 7.6
+  width_cm: 22.9
+  depth_cm: 10.2
+
+weight:
+  value: 3.2
+  unit: "oz"
+
+pack_count: 8
+
+base_geometry: "geo/base.usd"
+material: "materials/master.mtlx"
+
+lods:
+  hero: "geo/base.usd"
+  realtime: "geo/lod1.usd"
+  thumbnail: "geo/lod2.usd"
+
+variants:
+  en-us:
+    label_texture: "variants/en-us/label_diffuse.exr"
+    product_name_localized: "Safeguard Bar Soap - Fresh Clean Scent with Aloe"
+
+render_presets:
+  ecommerce:
+    resolution: [2048, 2048]
+    renderer: "arnold"
+    lighting_rig: "rigs/packshot_neutral.usd"
+    background: "white"
+  social:
+    resolution: [1080, 1080]
+    renderer: "cycles"
+    lighting_rig: "rigs/lifestyle_warm.usd"
+    background: "gradient"
+  broadcast:
+    resolution: [3840, 2160]
+    renderer: "arnold"
+    lighting_rig: "rigs/hero_beauty.usd"
+    background: "environment"
+
+tags:
+  - "bar soap"
+  - "antibacterial"
+  - "aloe"
+  - "micellar"
+  - "multipack"
+
+created: "2026-03-13"
+updated: "2026-03-13"

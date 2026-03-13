@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "assetlib"
+version = "0.1.0"
+description = "Digital Twin Asset Library — pipeline tools for photorealistic 3D product assets"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.0",
+    "pyyaml>=6.0",
+    "jsonschema>=4.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov"]
+
+[project.scripts]
+assetlib = "assetlib.cli:cli"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/assetlib"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,18 @@
+archetype: "bar_soap_box"
+description: "Rectangular cardboard box containing bar soap units"
+
+default_dimensions:
+  height_cm: 7.6
+  width_cm: 22.9
+  depth_cm: 10.2
+
+geometry_notes: |
+  Base mesh: rectangular box with slightly rounded edges, tuck-flap lid.
+  UV layout: box net unwrap (all six faces contiguous for print-ready label).
+  Poly budget: hero 15k (box only), lod1 4k, lod2 500.
+  For multipack, model the outer box. Individual bars modeled as separate asset if needed.
+
+material_zones:
+  - box_cardboard_exterior
+  - box_cardboard_interior
+  - label_wrap

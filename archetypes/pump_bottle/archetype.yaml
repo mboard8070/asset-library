@@ -1,0 +1,21 @@
+archetype: "pump_bottle"
+description: "Pump-top liquid dispenser bottle (hand soap, lotion, sanitizer)"
+
+default_dimensions:
+  height_cm: 20.3
+  width_cm: 8.9
+  depth_cm: 5.1
+
+geometry_notes: |
+  Base mesh: cylindrical body with slight taper, narrowing neck, pump mechanism cap.
+  UV layout: body wrap (front/back label zones), cap as separate UV island.
+  Poly budget: hero 50k, lod1 10k, lod2 2k.
+  Liquid interior visible through translucent plastic — model interior volume.
+
+material_zones:
+  - body_plastic
+  - cap_plastic
+  - pump_mechanism
+  - label_front
+  - label_back
+  - liquid_interior
