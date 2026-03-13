@@ -17,11 +17,11 @@ weight:
 
 pack_count: 1
 
-base_geometry: "geo/base.usd"
+base_geometry: "geo/base.usdz"
 material: "materials/master.mtlx"
 
 lods:
-  hero: "geo/base.usd"
+  hero: "geo/base.usdz"
   realtime: "geo/lod1.usd"
   thumbnail: "geo/lod2.usd"
 
@@ -66,9 +66,9 @@ material_zones:
     metalness: 0.0
   label_front:
     type: standard_surface
-    base_color_map: "textures/label_diffuse.exr"
-    specular_roughness: 0.4
-    normal_map: "textures/label_normal.exr"
+    base_color_map: "textures/BakedTexture.png"
+    specular_roughness_map: "textures/roughness_map.png"
+    normal_map: "textures/normal_map.png"
   liquid_interior:
     type: standard_surface
     base_color: [0.75, 0.55, 0.85]
