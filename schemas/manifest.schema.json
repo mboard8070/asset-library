@@ -123,6 +123,69 @@
         }
       }
     },
+    "material_zones": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "default": "standard_surface" },
+          "base_color": {
+            "type": "array",
+            "items": { "type": "number" },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "base_color_map": { "type": "string" },
+          "metalness": { "type": "number", "minimum": 0, "maximum": 1 },
+          "specular": { "type": "number", "minimum": 0, "maximum": 1 },
+          "specular_color": {
+            "type": "array",
+            "items": { "type": "number" },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "specular_roughness": { "type": "number", "minimum": 0, "maximum": 1 },
+          "specular_roughness_map": { "type": "string" },
+          "normal_map": { "type": "string" },
+          "transmission": { "type": "number", "minimum": 0, "maximum": 1 },
+          "transmission_color": {
+            "type": "array",
+            "items": { "type": "number" },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "coat": { "type": "number", "minimum": 0, "maximum": 1 },
+          "coat_roughness": { "type": "number", "minimum": 0, "maximum": 1 },
+          "subsurface": { "type": "number", "minimum": 0, "maximum": 1 },
+          "subsurface_color": {
+            "type": "array",
+            "items": { "type": "number" },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "subsurface_radius": {
+            "type": "array",
+            "items": { "type": "number" },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "opacity": {
+            "type": "array",
+            "items": { "type": "number" },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "emission": { "type": "number", "minimum": 0 },
+          "emission_color": {
+            "type": "array",
+            "items": { "type": "number" },
+            "minItems": 3,
+            "maxItems": 3
+          }
+        },
+        "additionalProperties": false
+      }
+    },
     "tags": {
       "type": "array",
       "items": { "type": "string" }

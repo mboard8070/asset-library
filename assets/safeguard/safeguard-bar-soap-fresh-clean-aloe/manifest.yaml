@@ -47,6 +47,23 @@ render_presets:
     lighting_rig: "rigs/hero_beauty.usd"
     background: "environment"
 
+material_zones:
+  box_cardboard_exterior:
+    type: standard_surface
+    base_color: [0.95, 0.95, 0.92]
+    specular_roughness: 0.7
+    metalness: 0.0
+  box_cardboard_interior:
+    type: standard_surface
+    base_color: [0.82, 0.78, 0.72]
+    specular_roughness: 0.85
+    metalness: 0.0
+  label_wrap:
+    type: standard_surface
+    base_color_map: "textures/label_diffuse.exr"
+    specular_roughness: 0.35
+    normal_map: "textures/label_normal.exr"
+
 tags:
   - "bar soap"
   - "antibacterial"

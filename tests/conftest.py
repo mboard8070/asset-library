@@ -41,6 +41,12 @@ def sample_manifest_dict():
                 "background": "white",
             }
         },
+        "material_zones": {
+            "body_plastic": {
+                "base_color": [0.42, 0.18, 0.55],
+                "specular_roughness": 0.15,
+            }
+        },
         "tags": ["hand soap", "antibacterial", "lavender"],
         "created": "2026-03-13",
         "updated": "2026-03-13",
